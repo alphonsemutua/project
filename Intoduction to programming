@@ -1,0 +1,204 @@
+class start:      #We start here
+    def starting_point(self):
+        print("Choose Either of the Countries") #The User Chhose a country
+        user_input = input("1.Kenya\n2.USA\n") #the hoices are Kenya and USA
+        if user_input == "1":         #cChoosing Kenya
+            start().kenya()
+        elif user_input == "2":      #Choosing USA
+            start().usa()
+        else:
+            print("Please select from the menu") #This is the message if you dont choose from Kenya or usa
+    def kenya(self):                        #Defining What choosing Kenya has
+        print("Welcome To Kenya") #This Message come and the below choices exist for this
+        user_input = input("1.Choose a city\n2.City with the most population\n3.County with the least population\n4.top 5 most populated cities"
+                           "\n5.What cities have more than 1 million people\n6.Which cities are within 3,000 populations of each other\n7.Which cities are within 17,000 populations of each other\n")
+        if user_input == "1": #Based on ypur choice
+            data = open("kenya.txt") #From a Text File Called Ke
+            user_view = ""
+            i = 1                     #you will reade whats on the text
+            for each_line in data:
+                cities = each_line.split(":")
+                each_city = cities[0]
+                user_view += str(i)+"." + each_city+"\n"
+                i += 1
+            city = input("\n\nView the population of each city\n"+user_view)
+            if city == "1":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Nairobi" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "2":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Mombasa" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "3":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Kisumu" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "4":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Nakuru" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "5":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Eldoret" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "6":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Kehancha" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "7":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Ruiru" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "8":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Kikuyu" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "9":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Kangundo" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+            elif city == "10":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Malindi" in population_indices:
+                            population = p[2]
+                            county = p[1]
+                            entire_info = "County: "+county+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+        elif user_input == "2":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Nairobi" in population_indices:
+                            population = p[2]
+                            country = p[0]
+                            entire_info = "Country: "+country+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+        elif user_input == "3":
+                datacity = open("kenya.txt")
+                for each_popn in datacity:
+                    p = each_popn.split(":")
+                    for population_indices in p:
+                        if "Malindi" in population_indices:
+                            population = p[2]
+                            country = p[0]
+                            entire_info = "Country: "+country+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+        elif user_input == "4":
+             dataCity = open("kenya.txt")
+             for each_popn in dataCity:
+                 p = each_popn.split(":")
+                 for population_indices in p:
+                     if "Nairobi" in population_indices:
+                          population = p[2]
+                          country = p[0]
+                          entire_info = "Country: "+country+"\npopulation: " + population
+                          print(entire_info)
+                          break ;
+                     elif "Mombasa" in population_indices:
+                            population = p[2]
+                            country = p[0]
+                            entire_info = "Country: "+country+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+                     elif "Kisumu" in population_indices:
+                            population = p[2]
+                            country = p[0]
+                            entire_info = "Country: "+country+"\npopulation: " + population
+                            print(entire_info)
+                            break ;
+                     elif "Nakuru" in population_indices:
+                           population = p[2]
+                           country = p[0]
+                           entire_info = "Country: "+country+"\npopulation: " + population
+                           print(entire_info)
+                           break ;
+                     elif "Eldoret" in population_indices:
+                           population = p[2]
+                           country = p[0]
+                           entire_info = "Country: "+country+"\npopulation: " + population
+                           print(entire_info)
+                           break ;
+        elif user_input == "5":
+            #print("5 pressed")
+             datacity = open("kenya.txt","r")
+             for each_line in datacity:
+                 city = each_line.split(":")
+                 each_city = city[2]
+                 for each_size in datacity:
+                     cities = each_line.split(":")
+                     each_popn = cities[2]
+                     if (int(each_popn) >= 100000):
+                         print(each_city)
+start().starting_point()
+input("press<ENTER>")
